@@ -7,6 +7,35 @@
     <script src="./index.js"></script>
 </head>
 <body>
-    <h1>Hola mundo</h1>
+    <h1>Ingreso de personas</h1>
+
+    <form id="form">
+
+        <div>
+            <label for="name">Apellidos:</label>
+            <input type="text" id="name" name="name" placeholder="" required>
+        </div>
+
+        <div>
+            <label for="age">Nombres:</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+        
+        <div>
+            <label for="femenino">
+                <input type="radio" id="femenino" name="genero" value="femenino" required> Femenino
+            </label>
+            <label for="masculino">
+                <input type="radio" id="masculino" name="genero" value="masculino" required> Masculino
+            </label>
+        </div>
+
+        <div>
+            <label for="Sueldo">Sueldo:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <button type="submit">Agregar</button>
+    </form>
 </body>
 </html>
