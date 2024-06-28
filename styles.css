@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    background-color: #2B2C37;
+    color: white;
+    padding: 1rem;
+
+}   
+
+header h1 {
+    position: relative;
+    display: inline-block;
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    margin-left: 4rem;
+}
+
+header h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px; 
+    height: 3px;
+    background: linear-gradient(to right, rgb(99, 95, 199), rgb(168, 164, 255));
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        margin-left: 1rem;
+    }
+}
+

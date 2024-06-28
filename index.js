@@ -19,7 +19,7 @@ const capturar = () => {
   };
 
 
-  //objeto persona
+//objeto persona
 const persona = {
   nombre: "Juan",
   apellido: "Perez",
