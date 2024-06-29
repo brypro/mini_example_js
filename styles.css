@@ -1,3 +1,4 @@
+/* Global styles */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -8,21 +9,21 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+/* Header */
 header {
     background-color: #2B2C37;
     color: white;
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 4rem;
 
 }   
 
 header h1 {
     position: relative;
     display: inline-block;
-    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    font-size: clamp(1.3rem, 5vw, 1.5rem);
     font-weight: 500;
     text-decoration: underline;
     text-underline-offset: 0.5rem;
-    margin-left: 4rem;
 }
 
 header h1::after {
@@ -35,9 +36,110 @@ header h1::after {
     background: linear-gradient(to right, rgb(99, 95, 199), rgb(168, 164, 255));
 }
 
-@media (max-width: 768px) {
-    header h1 {
-        margin-left: 1rem;
+/* Main */
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    padding: 3rem 4rem;
+    color: 3E3F4E;
+}
+
+/* Form */
+form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+form h2 {
+    font-size: clamp(1.2rem, 5vw, 1.3rem);
+    padding-bottom: 1.5rem;
+}
+
+.input-container {
+    display: grid;
+    gap: 0.4rem;
+}
+
+
+.gender-label-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.gender-label-container label {
+    padding: 0.5rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.label {
+    font-size: clamp(0.7rem, 4vw, 0.8rem);
+    font-weight: 500;
+}
+
+.input {
+    padding: 0.5rem;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.input-container .input:focus-within {
+    outline: 1px solid #635FC7; 
+    box-shadow: 0 0 5px rgba(98, 95, 199, 0.362);
+}
+
+input[type='radio'] {
+    accent-color: #635FC7;
+}
+
+
+/* Buttons */
+.btn-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 1rem;
+}
+
+.btn {
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: 500;
+}
+
+.cancel-btn {
+    background-color: #625fc724;
+}
+
+.cancel-btn:hover {
+    background-color: #625fc738;
+}
+
+.save-btn {
+    background-color: #635FC7;
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #A8A4FF;
+}
+
+/* Media Queries */
+@media (max-width: 850px) {
+    header {
+        padding: 1rem;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
     }
 }
+
+
 

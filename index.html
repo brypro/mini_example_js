@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>people manager</title>
+    <title>People Manager</title>
     <script src="./index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,52 +16,64 @@
         <h1>People Manager</h1>
     </header>
 
-    <h1>Ingreso de personas</h1>
+    
+    <main>
 
-    <form id="form">
-
-        <div>
-            <label for="name">Apellidos:</label>
-            <input type="text" id="name" name="name" placeholder="" required>
-        </div>
-
-        <div>
-            <label for="age">Nombres:</label>
-            <input type="number" id="age" name="age" required>
-        </div>
+        <form id="form">
+            <h2>Añadir personal</h2>
+            <div class="input-container">
+                <label class="label" for="name">APELLIDOS</label>
+                <input class="input" type="text" id="name" name="name" required>
+            </div>
+    
+            <div class="input-container">
+                <label class="label" for="age">NOMBRES</label>
+                <input class="input" type="text" id="age" name="age" required>
+            </div>
+            
+            <div class="input-container">
+                <p class="label">GÉNERO</p>
+                <div class="gender-label-container">   
+                    <label class="input" for="femenino">
+                        <input class="gender-radio" type="radio" id="femenino" name="genero" value="femenino" required> Femenino
+                    </label>
+                    <label class="input" for="masculino">
+                        <input class="gender-radio" type="radio" id="masculino" name="genero" value="masculino"> Masculino
+                    </label>
+                </div>
+            </div>            
+    
+            <div class="input-container">
+                <label class="label" for="Sueldo">SUELDO</label>
+                <input class="input" type="number" id="sueldo" name="sueldo" required>
+            </div>
+    
+            <div class="btn-container">
+                <button class="cancel-btn btn" type="submit">CANCELAR</button>
+                <button class="save-btn btn" type="submit">GUARDAR</button>
+            </div>
+        </form>
         
-        <div>
-            <label for="femenino">
-                <input type="radio" id="femenino" name="genero" value="femenino" required> Femenino
-            </label>
-            <label for="masculino">
-                <input type="radio" id="masculino" name="genero" value="masculino" required> Masculino
-            </label>
-        </div>
+        <!-- <table>
+            <thead>
+                <tr>
+                    <th>Apellidos</th>
+                    <th>Nombres</th>
+                    <th>Genero</th>
+                    <th>E. Civil</th>
+                    <th>Sueldo</th>
+                    <th>Acción</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="people">
+            </tbody>
+        </table> -->
 
-        <div>
-            <label for="Sueldo">Sueldo:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
+    </main>
 
-        <button type="submit">Agregar</button>
-    </form>
 
-    <!-- <table>
-        <thead>
-            <tr>
-                <th>Apellidos</th>
-                <th>Nombres</th>
-                <th>Genero</th>
-                <th>E. Civil</th>
-                <th>Sueldo</th>
-                <th>Acción</th>
-                <th>Acción</th>
-            </tr>
-        </thead>
-        <tbody id="people">
-        </tbody>
-    </table> -->
+
 
 </body>
 </html>
