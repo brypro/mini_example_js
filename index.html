@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>People Manager</title>
-    <script src="https://kit.fontawesome.com/d85944cffc.js" crossorigin="anonymous"></script>
-    <script src="./index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/d85944cffc.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
 </head>
 <body>
 
@@ -27,45 +27,46 @@
                 <i class="fa-solid fa-user-group"></i>
                 <h2>Añadir personal</h2>
             </div>
+
             <div class="input-container">
-                <label class="label" for="name">APELLIDOS</label>
-                <input class="input" type="text" id="name" name="name" required>
+                <label class="label" for="apellidos">APELLIDOS</label>
+                <input class="input" type="text" id="apellidos" name="apellidos" required>
             </div>
     
             <div class="input-container">
-                <label class="label" for="age">NOMBRES</label>
-                <input class="input" type="text" id="age" name="age" required>
+                <label class="label" for="nombres">NOMBRES</label>
+                <input class="input" type="text" id="nombres" name="nombres" required>
             </div>
             
             <div class="input-container">
                 <p class="label">GÉNERO</p>
                 <div class="gender-label-container">   
                     <label class="input" for="femenino">
-                        <input class="gender-radio" type="radio" id="femenino" name="genero" value="femenino" required> Femenino
+                        <input class="gender-radio" type="radio" id="femenino" name="genero" value="Femenino" required> Femenino
                     </label>
                     <label class="input" for="masculino">
-                        <input class="gender-radio" type="radio" id="masculino" name="genero" value="masculino"> Masculino
+                        <input class="gender-radio" type="radio" id="masculino" name="genero" value="Masculino"> Masculino
                     </label>
                 </div>
             </div>         
             
             <div class="input-container">
-                <label class="label" for="estado-civil">ESTADO CIVIL</label>
-                <select class="input" name="estado-civil" id="estado-civil" required>
-                    <option value="soltero">Soltero</option>
-                    <option value="casado">Casado</option>
-                    <option value="divorciado">Divorciado</option>
-                    <option value="viudo">Viudo</option>
+                <label class="label" for="estadoCivil">ESTADO CIVIL</label>
+                <select class="input" name="estadoCivil" id="estadoCivil" required>
+                    <option value="Soltero(a)">Soltero(a)</option>
+                    <option value="Casado(a)">Casado(a)</option>
+                    <option value="Divorciado(a)">Divorciado(a)</option>
+                    <option value="Viudo(a)">Viudo(a)</option>
                 </select>
             </div>
     
             <div class="input-container">
-                <label class="label" for="Sueldo">SUELDO</label>
+                <label class="label" for="sueldo">SUELDO</label>
                 <input class="input" type="number" id="sueldo" name="sueldo" required>
             </div>
     
             <div class="btn-container">
-                <button class="cancel-btn btn" type="submit">CANCELAR</button>
+                <button class="cancel-btn btn" id="cancel-btn" type="button">CANCELAR</button>
                 <button class="save-btn btn" type="submit">GUARDAR</button>
             </div>
         </form>
@@ -81,11 +82,11 @@
                         <th>Género</th>
                         <th>E. Civil</th>
                         <th>Sueldo</th>
-                        <th></th>
-                        <th></th>
+                        <th><button class="btn-edit" id="btn-edit"><i class="fa-solid fa-pen"></i></button></th>
+                        <th><button class="btn-delete" id="btn-delete"><i class="fa-solid fa-trash"></i></button></th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbody">
                     <tr>
                         <td><input type="checkbox"></td>
                         <td>Smith</td>
@@ -93,8 +94,8 @@
                         <td>Masculino</td>
                         <td>Soltero</td>
                         <td>$2500</td>
-                        <td><button class="btn-edit"><i class="fa-solid fa-pen"></i></button></td>
-                        <td><button class="btn-delete"><i class="fa-solid fa-trash"></i></button></td>
+                        <td></button></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox"></td>
@@ -103,9 +104,8 @@
                         <td>Femenino</td>
                         <td>Casada</td>
                         <td>$3000</td>
-                        <td><button class="btn-edit"><i class="fa-solid fa-pen"></i></button></td>
-                        <td><button class="btn-delete"><i class="fa-solid fa-trash"></i></button></td>
-                    </tr>
+                        <td></td>
+                        <td></td>
                 </tbody>
             </table>
         </div>

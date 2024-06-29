@@ -156,7 +156,7 @@ table {
 }
 
 th, td {
-    padding: 1rem;
+    padding: 1rem 0.5rem;
     text-align: left;
 }
 
@@ -170,7 +170,7 @@ tbody tr:nth-child(even) {
     
 }
 
-tbody button {
+th button {
     background-color: #625fc7;
     color: white;
     border: none;
@@ -182,15 +182,15 @@ tbody button {
     font-size: 0.8rem;
 }
 
-tbody button:hover {
+th button:hover {
     background-color: #A8A4FF;
 }
 
-tbody .btn-delete {
+th .btn-delete {
     background-color: #FF4D4D;
 }
 
-tbody .btn-delete:hover {
+th .btn-delete:hover {
     background-color: #FF9898;
 }
 
