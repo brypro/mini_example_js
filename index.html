@@ -13,13 +13,15 @@
 </head>
 <body>
 
+    <!-- Header -->
     <header>
         <h1>People Manager</h1>
     </header>
 
-    
+    <!-- Main -->
     <main>
 
+        <!-- Form -->
         <form id="form">
             <div class="form-title">
                 <i class="fa-solid fa-user-group"></i>
@@ -45,7 +47,17 @@
                         <input class="gender-radio" type="radio" id="masculino" name="genero" value="masculino"> Masculino
                     </label>
                 </div>
-            </div>            
+            </div>         
+            
+            <div class="input-container">
+                <label class="label" for="estado-civil">ESTADO CIVIL</label>
+                <select class="input" name="estado-civil" id="estado-civil" required>
+                    <option value="soltero">Soltero</option>
+                    <option value="casado">Casado</option>
+                    <option value="divorciado">Divorciado</option>
+                    <option value="viudo">Viudo</option>
+                </select>
+            </div>
     
             <div class="input-container">
                 <label class="label" for="Sueldo">SUELDO</label>
@@ -58,6 +70,7 @@
             </div>
         </form>
         
+        <!-- Table -->
         <div class="table-container">
             <table>
                 <thead>
