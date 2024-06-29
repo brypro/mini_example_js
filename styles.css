@@ -5,8 +5,14 @@
     margin: 0;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header */
@@ -40,19 +46,28 @@ header h1::after {
 main {
     display: grid;
     grid-template-columns: 1fr 2fr; 
-    padding: 3rem 4rem;
-    color: 3E3F4E;
+    color: #3E3F4E;
+    gap: 1.5rem;
+    height: 100%;
 }
 
 /* Form */
 form {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
+    padding: 3rem 1rem 3rem 4rem;
 }
 
-form h2 {
-    font-size: clamp(1.2rem, 5vw, 1.3rem);
+.form-title {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
     padding-bottom: 1.5rem;
+}
+
+.form-title h2 {
+    font-size: clamp(1.2rem, 5vw, 1.3rem);
 }
 
 .input-container {
@@ -129,6 +144,61 @@ input[type='radio'] {
     background-color: #A8A4FF;
 }
 
+/* Table */
+.table-container {
+    overflow-x: auto;
+    border-left: 1px solid #D1D1D1;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+}
+
+thead {
+    background-color: #625fc712;
+}
+
+
+tbody tr:nth-child(even) {
+    background-color: #625fc712;
+    
+}
+
+tbody button {
+    background-color: #625fc7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+tbody button:hover {
+    background-color: #A8A4FF;
+}
+
+tbody .btn-delete {
+    background-color: #FF4D4D;
+}
+
+tbody .btn-delete:hover {
+    background-color: #FF9898;
+}
+
+
+input[type='checkbox'] {
+    accent-color: #635FC7;
+}
+
 /* Media Queries */
 @media (max-width: 850px) {
     header {
@@ -137,6 +207,10 @@ input[type='radio'] {
 
     main {
         grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    form {
         padding: 2rem 1rem;
     }
 }

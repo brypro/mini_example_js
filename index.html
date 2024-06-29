@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>People Manager</title>
+    <script src="https://kit.fontawesome.com/d85944cffc.js" crossorigin="anonymous"></script>
     <script src="./index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +21,10 @@
     <main>
 
         <form id="form">
-            <h2>Añadir personal</h2>
+            <div class="form-title">
+                <i class="fa-solid fa-user-group"></i>
+                <h2>Añadir personal</h2>
+            </div>
             <div class="input-container">
                 <label class="label" for="name">APELLIDOS</label>
                 <input class="input" type="text" id="name" name="name" required>
@@ -54,21 +58,44 @@
             </div>
         </form>
         
-        <!-- <table>
-            <thead>
-                <tr>
-                    <th>Apellidos</th>
-                    <th>Nombres</th>
-                    <th>Genero</th>
-                    <th>E. Civil</th>
-                    <th>Sueldo</th>
-                    <th>Acción</th>
-                    <th>Acción</th>
-                </tr>
-            </thead>
-            <tbody id="people">
-            </tbody>
-        </table> -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Apellidos</th>
+                        <th>Nombres</th>
+                        <th>Género</th>
+                        <th>E. Civil</th>
+                        <th>Sueldo</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Smith</td>
+                        <td>John</td>
+                        <td>Masculino</td>
+                        <td>Soltero</td>
+                        <td>$2500</td>
+                        <td><button class="btn-edit"><i class="fa-solid fa-pen"></i></button></td>
+                        <td><button class="btn-delete"><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Doe</td>
+                        <td>Jane</td>
+                        <td>Femenino</td>
+                        <td>Casada</td>
+                        <td>$3000</td>
+                        <td><button class="btn-edit"><i class="fa-solid fa-pen"></i></button></td>
+                        <td><button class="btn-delete"><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
     </main>
 
