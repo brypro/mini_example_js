@@ -1,1 +1,1 @@
-# mini_example_js
+# People Manager App
