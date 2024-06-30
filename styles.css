@@ -63,7 +63,7 @@ form {
     display: flex;
     gap: 1rem;
     align-items: center;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 .form-title h2 {

@@ -1,145 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>People Manager</title>
-    <script
-      src="https://kit.fontawesome.com/d85944cffc.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/d85944cffc.js" crossorigin="anonymous"></script>
     <script src="./index.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
+</head>
+
+<body>
+    <!--Header -->
     <header>
-      <h1>People Manager</h1>
+        <h1>People Manager</h1>
     </header>
 
+    <!--Main -->
     <main>
-      <form id="form">
-        <div class="form-title">
-          <i class="fa-solid fa-user-group"></i>
-          <h2 id="form-title-text">Añadir personal</h2>
-        </div>
-        <div class="input-container">
-          <label class="label" for="apellidos">APELLIDOS</label>
-          <input
-            class="input"
-            type="text"
-            id="apellidos"
-            name="apellidos"
-            required
-          />
-        </div>
+        <!--Form -->
+        <form id="form">
+    
+            <div class="form-title">
+                <i class="fa-solid fa-user-group"></i>
+                <h2 id="form-title-text">Añadir personal</h2>
+            </div>
 
-        <div class="input-container">
-          <label class="label" for="nombres">NOMBRES</label>
-          <input
-            class="input"
-            type="text"
-            id="nombres"
-            name="nombres"
-            required
-          />
-        </div>
+            <div class="input-container">
+                <label class="label" for="apellidos">APELLIDOS</label>
+                <input class="input" type="text" id="apellidos" name="apellidos" required />
+            </div>
 
-        <div class="input-container">
-          <p class="label">GÉNERO</p>
-          <div class="gender-label-container">
-            <label class="input" for="femenino">
-              <input
-                class="gender-radio"
-                type="radio"
-                id="femenino"
-                name="genero"
-                value="Femenino"
-                required
-              />
-              Femenino
-            </label>
-            <label class="input" for="masculino">
-              <input
-                class="gender-radio"
-                type="radio"
-                id="masculino"
-                name="genero"
-                value="Masculino"
-              />
-              Masculino
-            </label>
-          </div>
-        </div>
+            <div class="input-container">
+                <label class="label" for="nombres">NOMBRES</label>
+                <input class="input" type="text" id="nombres" name="nombres" required />
+            </div>
 
-        <div class="input-container">
-          <label class="label" for="estadoCivil">ESTADO CIVIL</label>
-          <select
-            class="form-select input"
-            id="estadoCivil"
-            name="estadoCivil"
-            aria-label="Estado civil"
-            required
-          >
-            <option value="">--seleccione--</option>
-            <option value="Soltero(a)">Soltero(a)</option>
-            <option value="Casado(a)">Casado(a)</option>
-            <option value="Divorciado(a)">Divorciado(a)</option>
-            <option value="Viudo(a)">Viudo(a)</option>
-          </select>
-        </div>
+            <div class="input-container">
+                <p class="label">GÉNERO</p>
+                <div class="gender-label-container">
+                    <label class="input" for="femenino">
+                        <input class="gender-radio" type="radio" id="femenino" name="genero" value="Femenino" required />
+                        Femenino
+                    </label>
+                    <label class="input" for="masculino">
+                        <input class="gender-radio" type="radio" id="masculino" name="genero" value="Masculino" />
+                        Masculino
+                    </label>
+                </div>
+            </div>
 
-        <div class="input-container">
-          <label class="label" for="sueldo">SUELDO</label>
-          <input
-            class="input"
-            type="number"
-            id="sueldo"
-            name="sueldo"
-            required
-          />
-        </div>
+            <div class="input-container">
+                <label class="label" for="estadoCivil">ESTADO CIVIL</label>
+                <select class="form-select input" id="estadoCivil" name="estadoCivil" aria-label="Estado civil"
+                    required>
+                    <option value="">Seleccione</option>
+                    <option value="Soltero(a)">Soltero(a)</option>
+                    <option value="Casado(a)">Casado(a)</option>
+                    <option value="Divorciado(a)">Divorciado(a)</option>
+                    <option value="Viudo(a)">Viudo(a)</option>
+                </select>
+            </div>
 
-        <div class="btn-container">
-          <button class="cancel-btn btn" type="reset" id="cancel-btn">
-            LIMPIAR
-          </button>
-          <button class="save-btn btn" type="submit" id="save-btn">
-            GUARDAR
-          </button>
-        </div>
-      </form>
+            <div class="input-container">
+                <label class="label" for="sueldo">SUELDO</label>
+                <input class="input" type="number" id="sueldo" name="sueldo" required />
+            </div>
 
-      <div class="table-container">
-        <div class="filter-container">
-          <label for="filterGenero">Filtrar por Género:</label>
-          <select id="filterGenero">
-            <option value="todos">Todos</option>
-            <option value="Masculino">Masculino</option>
-            <option value="Femenino">Femenino</option>
-          </select>
+            <div class="btn-container">
+                <button class="cancel-btn btn" type="reset" id="cancel-btn">
+                    LIMPIAR
+                </button>
+                <button class="save-btn btn" type="submit" id="save-btn">
+                    GUARDAR
+                </button>
+            </div>
+        </form>
+
+        <!--Table -->
+        <div class="table-container">
+
+            <div class="filter-container">
+                <label for="filterGenero">Filtrar por Género:</label>
+                <select id="filterGenero">
+                    <option value="todos">Todos</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Apellidos</th>
+                        <th>Nombres</th>
+                        <th>Género</th>
+                        <th>E. Civil</th>
+                        <th>Sueldo</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Apellidos</th>
-              <th>Nombres</th>
-              <th>Género</th>
-              <th>E. Civil</th>
-              <th>Sueldo</th>
-              <th></th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody id="table-body"></tbody>
-        </table>
-      </div>
     </main>
-  </body>
+</body>
+
 </html>

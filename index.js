@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
           nombres: "John",
           genero: "Masculino",
           estadoCivil: "Soltero(a)",
-          sueldo: "$2500",
+          sueldo: "2500000",
         },
         {
           apellidos: "Doe",
           nombres: "Jane",
           genero: "Femenino",
           estadoCivil: "Casado(a)",
-          sueldo: "$3000",
+          sueldo: "2500000",
         },
       ];
 
