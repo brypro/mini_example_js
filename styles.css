@@ -195,10 +195,6 @@ tbody .btn-delete:hover {
 }
 
 
-input[type='checkbox'] {
-    accent-color: #635FC7;
-}
-
 /* Media Queries */
 @media (max-width: 850px) {
     header {

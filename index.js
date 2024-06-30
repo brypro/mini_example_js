@@ -83,7 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const row = document.createElement("tr");
 
       row.innerHTML = `
-        <td><input type="checkbox" /></td>
         <td>${item.apellidos}</td>
         <td>${item.nombres}</td>
         <td>${item.genero}</td>
