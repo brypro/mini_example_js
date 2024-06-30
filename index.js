@@ -18,6 +18,20 @@ document.addEventListener("DOMContentLoaded", () => {
           estadoCivil: "Casado(a)",
           sueldo: "2500000",
         },
+        {
+          apellidos: "Doe",
+          nombres: "John",
+          genero: "Masculino",
+          estadoCivil: "Casado(a)",
+          sueldo: "2500000",
+        },
+        {
+          apellidos: "Smith",
+          nombres: "Jane",
+          genero: "Femenino",
+          estadoCivil: "Soltero(a)",
+          sueldo: "2500000",
+        },
       ];
 
   let editIndex = null;

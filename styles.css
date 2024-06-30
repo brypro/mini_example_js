@@ -194,6 +194,31 @@ tbody .btn-delete:hover {
     background-color: #FF9898;
 }
 
+/* Filter */
+.filter-container {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.filter-container label {
+    font-size: 0.8rem;
+    padding-left: 0.2rem;
+}
+
+.filter-container select {
+    padding: 0.5rem;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    max-width: 10rem;
+    font-size: 0.9rem;
+}
+
+.filter-container select:focus {
+    outline: 1px solid #635FC7; 
+    box-shadow: 0 0 5px rgba(98, 95, 199, 0.362);
+}
+
 
 /* Media Queries */
 @media (max-width: 850px) {
@@ -209,6 +234,12 @@ tbody .btn-delete:hover {
     form {
         padding: 2rem 1rem;
     }
+
+    .table-container {
+        border-left: none;
+        border-top: 1px solid #D1D1D1;
+    }
+
 }
 
 
