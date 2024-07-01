@@ -13,6 +13,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 /* Header */
@@ -20,7 +21,6 @@ header {
     background-color: #2B2C37;
     color: white;
     padding: 1rem 1rem 1rem 4rem;
-
 }   
 
 header h1 {
@@ -49,14 +49,15 @@ main {
     color: #3E3F4E;
     gap: 1.5rem;
     height: 100%;
+    overflow: hidden;
 }
 
 /* Form */
 form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 3rem 1rem 3rem 4rem;
+    justify-content: space-between;
+    padding: 2rem 1rem 3rem 4rem;
 }
 
 .form-title {
@@ -146,7 +147,7 @@ input[type='radio'] {
 
 /* Table */
 .table-container {
-    overflow-x: auto;
+    overflow: auto;
     border-left: 1px solid #D1D1D1;
 }
 
@@ -222,6 +223,10 @@ tbody .btn-delete:hover {
 
 /* Media Queries */
 @media (max-width: 850px) {
+    body {
+        overflow: scroll;
+    }
+
     header {
         padding: 1rem;
     }
@@ -229,10 +234,12 @@ tbody .btn-delete:hover {
     main {
         grid-template-columns: 1fr;
         height: auto;
+        overflow:visible;
     }
 
     form {
         padding: 2rem 1rem;
+        gap: 1rem;
     }
 
     .table-container {
