@@ -1,0 +1,252 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+header {
+  background-color: #2B2C37;
+  color: white;
+  padding: 1rem 1rem 1rem 4rem;
+}   
+
+header h1 {
+  position: relative;
+  display: inline-block;
+  font-size: clamp(1.3rem, 5vw, 1.5rem);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+header h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px; 
+  height: 3px;
+  background: linear-gradient(to right, rgb(99, 95, 199), rgb(168, 164, 255));
+}
+
+/* Main */
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+  color: #3E3F4E;
+  gap: 1.5rem;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  padding: 2rem 1rem 3rem 4rem;
+}
+
+.form-title {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.form-title h2 {
+  font-size: clamp(1.2rem, 5vw, 1.3rem);
+}
+
+.input-container {
+  display: grid;
+  gap: 0.4rem;
+}
+
+
+.gender-label-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.gender-label-container label {
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: clamp(0.7rem, 4vw, 0.8rem);
+  font-weight: 500;
+}
+
+.input {
+  padding: 0.5rem;
+  border: 1px solid #D1D1D1;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.input-container .input:focus-within {
+  outline: 1px solid #635FC7; 
+  box-shadow: 0 0 5px rgba(98, 95, 199, 0.362);
+}
+
+input[type='radio'] {
+  accent-color: #635FC7;
+}
+
+
+/* Buttons */
+.btn-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 1rem;
+}
+
+.btn {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-weight: 500;
+}
+
+.cancel-btn {
+  background-color: #625fc724;
+}
+
+.cancel-btn:hover {
+  background-color: #625fc738;
+}
+
+.save-btn {
+  background-color: #635FC7;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #A8A4FF;
+}
+
+/* Table */
+.table-container {
+  overflow: auto;
+  border-left: 1px solid #D1D1D1;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+}
+
+thead {
+  background-color: #625fc712;
+}
+
+
+tbody tr:nth-child(even) {
+  background-color: #625fc712;
+  
+}
+
+tbody button {
+  background-color: #625fc7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+tbody button:hover {
+  background-color: #A8A4FF;
+}
+
+tbody .btn-delete {
+  background-color: #FF4D4D;
+}
+
+tbody .btn-delete:hover {
+  background-color: #FF9898;
+}
+
+/* Filter */
+.filter-container {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.filter-container label {
+  font-size: 0.8rem;
+  padding-left: 0.2rem;
+}
+
+.filter-container select {
+  padding: 0.5rem;
+  border: 1px solid #D1D1D1;
+  border-radius: 5px;
+  max-width: 10rem;
+  font-size: 0.9rem;
+}
+
+.filter-container select:focus {
+  outline: 1px solid #635FC7; 
+  box-shadow: 0 0 5px rgba(98, 95, 199, 0.362);
+}
+
+
+/* Media Queries */
+@media (max-width: 850px) {
+  body {
+      overflow: scroll;
+  }
+
+  header {
+      padding: 1rem;
+  }
+
+  main {
+      grid-template-columns: 1fr;
+      height: auto;
+      overflow:visible;
+  }
+
+  form {
+      padding: 2rem 1rem;
+      gap: 1rem;
+  }
+
+  .table-container {
+      border-left: none;
+      border-top: 1px solid #D1D1D1;
+  }
+
+}
+
+
+
