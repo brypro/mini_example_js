@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserGroup } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
           <form id="form">
       
               <div className="form-title">
-                  <i className="fa-solid fa-user-group"></i>
+                  <FontAwesomeIcon icon={faUserGroup} className='faUserGroup'/>
                   <h2 id="form-title-text">Añadir personal</h2>
               </div>
 
