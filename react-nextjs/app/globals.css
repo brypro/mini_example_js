@@ -51,6 +51,10 @@ main {
   overflow: hidden;
 }
 
+.container {
+  border-left: 1px solid #D1D1D1;
+  overflow: auto;
+}
 
 /* Media Queries */
 @media (max-width: 850px) {
@@ -68,11 +72,7 @@ main {
       overflow:visible;
   }
 
-  .form {
-      padding: 2rem 1rem;
-  }
-
-  .tableContainer {
+  .table-container {
       border-left: none;
       border-top: 1px solid #D1D1D1;
   }

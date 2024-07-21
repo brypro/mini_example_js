@@ -1,0 +1,23 @@
+.filterContainer {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.filterContainer label {
+  font-size: 0.8rem;
+  padding-left: 0.2rem;
+}
+
+.filterContainer select {
+  padding: 0.5rem;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  max-width: 10rem;
+  font-size: 0.9rem;
+}
+
+.filterContainer select:focus {
+  outline: 1px solid #635fc7;
+  box-shadow: 0 0 5px rgba(98, 95, 199, 0.362);
+}

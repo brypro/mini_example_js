@@ -1,7 +1,5 @@
-/* Table */
 .tableContainer {
     overflow: auto;
-    border-left: 1px solid #D1D1D1;
     white-space: nowrap;
   }
   
@@ -48,31 +46,7 @@
 .tbody .btnDelete:hover {
     background-color: #FF9898;
   }
-  
-/* Filter */
-.filterContainer {
-display: grid;
-gap: 0.5rem;
-padding: 1rem;
-}
 
-.filterContainer label {
-font-size: 0.8rem;
-padding-left: 0.2rem;
-}
-
-.filterContainer select {
-padding: 0.5rem;
-border: 1px solid #D1D1D1;
-border-radius: 5px;
-max-width: 10rem;
-font-size: 0.9rem;
-}
-
-.filterContainer select:focus {
-outline: 1px solid #635FC7; 
-box-shadow: 0 0 5px rgba(98, 95, 199, 0.362);
-}
 
 @media (max-width: 850px) {
     .tableContainer {
