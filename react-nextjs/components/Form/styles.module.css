@@ -92,3 +92,13 @@
   .saveBtn:hover {
     background-color: #A8A4FF;
   }
+
+  @media (max-width: 850px) {  
+    .form {
+        padding: 2rem 1rem;
+    }
+  }
+  
+  
+  
+  

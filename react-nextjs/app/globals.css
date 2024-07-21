@@ -68,9 +68,8 @@ main {
       overflow:visible;
   }
 
-  form {
+  .form {
       padding: 2rem 1rem;
-      gap: 1rem;
   }
 
   .tableContainer {

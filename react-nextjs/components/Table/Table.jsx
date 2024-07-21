@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-const Table: React.FC = () => {
+export default function Table() {
     return (
         <div className={styles.tableContainer}>
 
@@ -32,5 +32,3 @@ const Table: React.FC = () => {
     </div>
     )
 }
-
-export default Table;

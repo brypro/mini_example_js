@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
 
-const Form: React.FC = () => {
+export default function Form() {
     return (
         <form id="form" className={styles.form}>
       
@@ -65,5 +65,3 @@ const Form: React.FC = () => {
 
     );
 }
-
-export default Form;
