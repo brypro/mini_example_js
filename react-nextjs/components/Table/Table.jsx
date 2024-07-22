@@ -1,10 +1,8 @@
 import React from "react";
 import styles from "./styles.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPen, faTrash } from "@fortawesome/free-solid-svg-icons";
+import TableFile from "./TableFile";
 
 const Table = ({ data, setEditPerson, deletePerson }) => {
-
   return (
     <div className={styles.tableContainer}>
       <table className={styles.table}>
@@ -24,29 +22,7 @@ const Table = ({ data, setEditPerson, deletePerson }) => {
         <tbody>
           {/* Iteración sobre el array de personas */}
           {data.map((persona) => (
-            <tr key={persona.id}>
-              <td>{persona.apellidos}</td>
-              <td>{persona.nombres}</td>
-              <td>{persona.genero}</td>
-              <td>{persona.estadoCivil}</td>
-              <td>{persona.sueldo}</td>
-              <td>
-                <button
-                  className={styles.editBtn}
-                  onClick={() => setEditPerson(persona)}
-                >
-                  <FontAwesomeIcon icon={faPen} />
-                </button>
-              </td>
-              <td>
-                <button
-                  className={styles.deleteBtn}
-                  onClick={() => deletePerson(persona.id)}
-                >
-                  <FontAwesomeIcon icon={faTrash} />
-                </button>
-              </td>
-            </tr>
+            <TableFile persona={persona} setEditPerson={setEditPerson} deletePerson={deletePerson} />
           ))}
         </tbody>
         

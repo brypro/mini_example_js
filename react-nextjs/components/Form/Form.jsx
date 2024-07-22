@@ -34,7 +34,7 @@ const Form = ({ addPerson, updatePerson, editPerson, setEditPerson }) => {
     setEditPerson(null);
   };
 
-  // Hook para cargar los datos de la persona a editar
+  // Hook para cargar los datos de la persona a editar, se ejecuta cuando se renderiza el componente y cuando cambia el valor de editPerson
   useEffect(() => {
     editPerson && setFormData({
         apellidos: editPerson.apellidos,
