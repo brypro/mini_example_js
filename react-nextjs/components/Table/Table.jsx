@@ -49,6 +49,7 @@ const Table = ({ data, setEditPerson, deletePerson }) => {
             </tr>
           ))}
         </tbody>
+        
       </table>
     </div>
   );

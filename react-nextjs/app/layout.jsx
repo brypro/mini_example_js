@@ -28,29 +28,36 @@ export default function RootLayout() {
   return (
     <html lang="en">
       <body className={openSans.className}>
+
         <header>
           <h1>People Manager</h1>
         </header>
 
         <main>
+
           <Form
             addPerson={addPerson}
             updatePerson={updatePerson}
             editPerson={editPerson}
             setEditPerson={setEditPerson}
           />
+
           <div className="container">
+
             <Filter
               filter={filter}
               setFilter={setFilter}
             />
+            
             <Table
               data={data}
               setEditPerson={setEditPerson}
               deletePerson={deletePerson}
             />
           </div>
+
         </main>
+
       </body>
     </html>
   );

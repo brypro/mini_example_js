@@ -72,11 +72,6 @@ main {
       overflow:visible;
   }
 
-  .table-container {
-      border-left: none;
-      border-top: 1px solid #D1D1D1;
-  }
-
 }
 
 

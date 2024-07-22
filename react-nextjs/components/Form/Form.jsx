@@ -15,31 +15,14 @@ const Form = ({ addPerson, updatePerson, editPerson, setEditPerson }) => {
     sueldo: "",
   });
 
-  // Hook para cargar los datos de la persona a editar
-  useEffect(() => {
-    if (editPerson) {
-      setFormData({
-        apellidos: editPerson.apellidos,
-        nombres: editPerson.nombres,
-        genero: editPerson.genero,
-        estadoCivil: editPerson.estadoCivil,
-        sueldo: editPerson.sueldo,
-      });
-    }
-  }, [editPerson]);
-
   // Función para manejar el envío del formulario
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (editPerson) {
-      updatePerson({ ...editPerson, ...formData });
-    } else {
-      addPerson(formData);
-    }
+    editPerson ? updatePerson({ ...editPerson, ... formData}) : addPerson(formData)
     resetForm();
   };
 
-  // funcion para resetear el formulario con setFormData
+  // Función para resetear el formulario
   const resetForm = () => {
     setFormData({
       apellidos: "",
@@ -51,6 +34,18 @@ const Form = ({ addPerson, updatePerson, editPerson, setEditPerson }) => {
     setEditPerson(null);
   };
 
+  // Hook para cargar los datos de la persona a editar
+  useEffect(() => {
+    editPerson && setFormData({
+        apellidos: editPerson.apellidos,
+        nombres: editPerson.nombres,
+        genero: editPerson.genero,
+        estadoCivil: editPerson.estadoCivil,
+        sueldo: editPerson.sueldo,
+      });
+  }, [editPerson]);
+
+
   // Función para manejar los cambios en los inputs
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -58,6 +53,7 @@ const Form = ({ addPerson, updatePerson, editPerson, setEditPerson }) => {
   };
 
   return (
+
     <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.formTitle}>
         <FontAwesomeIcon icon={faUserGroup} className={styles.faUserGroup} />
