@@ -28,7 +28,7 @@ const usePersonData = () => {
 
   // Efecto para filtrar datos según el filtro aplicado
   useEffect(() => {
-    const storedData = JSON.parse(localStorage.getItem("data")) || [];
+    const storedData = JSON.parse(localStorage.getItem("data")) || []; 
     if (filter === "todos") {
       setData(storedData);
     } else {
