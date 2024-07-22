@@ -43,12 +43,11 @@ export default function RootLayout() {
           />
 
           <div className="container">
-
+            
             <Filter
               filter={filter}
               setFilter={setFilter}
             />
-            
             <Table
               data={data}
               setEditPerson={setEditPerson}
