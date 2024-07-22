@@ -3,11 +3,10 @@ import React from "react";
 import styles from "./styles.module.css";
 
 
-const Filter = ({ filter, setFilter, filterData }) => {
+const Filter = ({ filter, setFilter }) => {
   const handleFilterChange = (event) => {
     const selectedFilter = event.target.value;
     setFilter(selectedFilter);
-    filterData(selectedFilter);
   };
 
   return (

@@ -31,11 +31,13 @@ const usePersonData = () => {
     const storedData = JSON.parse(localStorage.getItem("data")) || []; 
     if (filter === "todos") {
       setData(storedData);
+      console.log("todos", storedData);
     } else {
       const filteredData = storedData.filter((person) => person.genero === filter);
       setData(filteredData);
+      console.log("filtered", filteredData);
     }
-  }, [filter]);
+  }, [filter]); 
 
 
   // Funciones para manipular los datos
@@ -47,11 +49,13 @@ const usePersonData = () => {
   };
 
   const updatePerson = (updatePerson) => {
-    const updatedData = data.map((person) =>
+    const storedData = JSON.parse(localStorage.getItem("data")) || [];
+    const updatedData = storedData.map((person) =>
       person.id === updatePerson.id ? updatePerson : person
     );
     setData(updatedData);
     saveToLocalStorage(updatedData);
+    setFilter("todos");
   };
 
   const deletePerson = (id) => {
@@ -62,16 +66,11 @@ const usePersonData = () => {
     }
   };
 
-  const filterData = (genero) => {
-    setFilter(genero);
-  };
-
   return {
     data,
     addPerson,
     updatePerson,
     deletePerson,
-    filterData,
     filter,
     setFilter
   };

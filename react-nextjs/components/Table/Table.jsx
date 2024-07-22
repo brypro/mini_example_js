@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const Table = ({ data, setEditPerson, deletePerson }) => {
+
   return (
     <div className={styles.tableContainer}>
       <table className={styles.table}>

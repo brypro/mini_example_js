@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
 
 const Form = ({ addPerson, updatePerson, editPerson, setEditPerson }) => {
+    
   // Estado para almacenar los datos del formulario
   const [formData, setFormData] = useState({
     apellidos: "",

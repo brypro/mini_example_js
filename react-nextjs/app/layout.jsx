@@ -19,7 +19,6 @@ export default function RootLayout() {
     addPerson,
     updatePerson,
     deletePerson,
-    filterData,
     filter,
     setFilter,
   } = usePersonData();
@@ -44,7 +43,6 @@ export default function RootLayout() {
             <Filter
               filter={filter}
               setFilter={setFilter}
-              filterData={filterData}
             />
             <Table
               data={data}
