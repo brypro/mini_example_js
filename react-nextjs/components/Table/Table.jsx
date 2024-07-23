@@ -22,7 +22,7 @@ const Table = ({ data, setEditPerson, deletePerson }) => {
         <tbody>
           {/* Iteración sobre el array de personas */}
           {data.map((persona) => (
-            <TableFile persona={persona} setEditPerson={setEditPerson} deletePerson={deletePerson} />
+            <TableFile key={persona.id} persona={persona} setEditPerson={setEditPerson} deletePerson={deletePerson} />
           ))}
         </tbody>
         

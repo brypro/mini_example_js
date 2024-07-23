@@ -10,7 +10,7 @@ const TableFile = ({persona, setEditPerson, deletePerson}) => {
           currency: 'CLP'
         }).format(value);
     return (
-        <tr key={persona.id}>
+        <tr>
               <td>{persona.apellidos}</td>
               <td>{persona.nombres}</td>
               <td>{persona.genero}</td>

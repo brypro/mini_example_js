@@ -93,9 +93,11 @@ const usePersonData = () => {
     if (
       window.confirm("¿Estás seguro de que quieres eliminar este registro?")
     ) {
-      const updatedData = data.filter((person) => person.id !== id);
+      const storedData = JSON.parse(localStorage.getItem("data")) || [];
+      const updatedData = storedData.filter((person) => person.id !== id);
       setData(updatedData);
       saveToLocalStorage(updatedData);
+      refreshData(updatedData);
     }
   };
 
